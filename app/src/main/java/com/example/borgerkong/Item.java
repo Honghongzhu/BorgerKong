@@ -1,16 +1,26 @@
 package com.example.borgerkong;
 
 public class Item {
+    private int itemID;
     private String name;
-    private int cost;
+    private double cost;
     private String description;
     private int imageDrawableId;
 
-    public Item(String name, int cost, String description){
+    public Item(int itemID, String name, double cost, String description, int imageDrawableId){
+        this.itemID = itemID;
         this.name = name;
         this.cost = cost;
         this.description = description;
         this.imageDrawableId = imageDrawableId;
+    }
+
+    public int getItemID(){
+        return itemID;
+    }
+
+    public void setItemID(int itemID) {
+        this.itemID = itemID;
     }
 
     public String getName(){
@@ -21,7 +31,7 @@ public class Item {
         this.name = name;
     }
 
-    public int getCost(){
+    public Double getCost(){
         return cost;
     }
 
