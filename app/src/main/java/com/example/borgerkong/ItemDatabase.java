@@ -8,7 +8,7 @@ import java.util.List;
 public class ItemDatabase {
     private static final HashMap<Integer, Item> items = new HashMap<>();
 
-    public static Item getItemById(String itemID){
+    public static Item getItemById(int itemID){
         return items.get(itemID);
     }
 
