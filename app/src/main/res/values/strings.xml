@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Borger Kong</string>
+    <string name="view_order">View Order</string>
 </resources>
