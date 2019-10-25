@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,11 +45,11 @@ public class ItemDetailActivity extends AppCompatActivity {
 
         imageView.setImageResource(item.getImageDrawableId());
         nameTextView.setText(item.getName());
-        priceTextView.setText(String.format("$ %.2f", item.getCost()));
+        priceTextView.setText(String.format(Locale.getDefault(),"$ %.2f", item.getCost()));
         descriptionTextView.setText(item.getDescription());
 
-        amount = 1;
-        item.setAmountOrdered(1);
+        amount = item.getAmountOrdered();
+        item.setAmountOrdered(amount);
         amountTextView.setText(String.valueOf(amount));
 
         minButton.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +77,10 @@ public class ItemDetailActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                //the item is added
-                item.setOrdered(true);
+                if(item.getAmountOrdered()>0)
+                    item.setOrdered(true);
+                else
+                    item.setOrdered(false);
             }
         });
     }

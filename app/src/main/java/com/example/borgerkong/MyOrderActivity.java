@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -35,7 +36,7 @@ public class MyOrderActivity extends AppCompatActivity {
             totalCost += item.getCost()* (double)item.getAmountOrdered();
         }
         totalPrice = findViewById(R.id.priceTextView);
-        totalPrice.setText(String.format("$ %.2f", totalCost));
+        totalPrice.setText(String.format(Locale.getDefault(),"$ %.2f", totalCost));
         
     }
 }

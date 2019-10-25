@@ -4,5 +4,7 @@
     <string name="min">-</string>
     <string name="plus">+</string>
     <string name="add_order">Add</string>
-    <string name="total_price">Total: </string>
+    <string name="total_price">TOTAL: </string>
+    <string name="price_per_unit">Price per unit:</string>
+    <string name="my_order">MY ORDER</string>
 </resources>

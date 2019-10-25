@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,7 +32,7 @@ public class ItemOrderedAdapter extends RecyclerView.Adapter<ItemOrderedAdapter.
         final Item itemAtPosition = itemsToAdapt.get(position);
         holder.itemImageView.setImageResource(itemAtPosition.getImageDrawableId());
         holder.nameTextView.setText(itemAtPosition.getName());
-        holder.amountTextView.setText(String.format("%d X",itemAtPosition.getAmountOrdered()));
+        holder.amountTextView.setText(String.format(Locale.getDefault(),"%dx",itemAtPosition.getAmountOrdered()));
     }
 
     @Override
