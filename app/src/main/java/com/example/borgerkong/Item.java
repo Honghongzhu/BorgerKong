@@ -6,13 +6,17 @@ public class Item {
     private double cost;
     private String description;
     private int imageDrawableId;
+    private int amountOrdered;
+    private boolean ordered;
 
-    public Item(int itemID, String name, double cost, String description, int imageDrawableId){
+    public Item(int itemID, String name, double cost, String description, int imageDrawableId, int amountOrdered, boolean ordered){
         this.itemID = itemID;
         this.name = name;
         this.cost = cost;
         this.description = description;
         this.imageDrawableId = imageDrawableId;
+        this.amountOrdered = amountOrdered;
+        this.ordered = ordered;
     }
 
     public int getItemID(){
@@ -53,5 +57,21 @@ public class Item {
 
     public void setImageDrawableId(int imageDrawableId) {
         this.imageDrawableId = imageDrawableId;
+    }
+
+    public int getAmountOrdered() {
+        return amountOrdered;
+    }
+
+    public void setAmountOrdered(int amountOrdered) {
+        this.amountOrdered = amountOrdered;
+    }
+
+    public boolean isOrdered() {
+        return ordered;
+    }
+
+    public void setOrdered(boolean ordered) {
+        this.ordered = ordered;
     }
 }
