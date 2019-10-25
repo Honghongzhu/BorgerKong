@@ -52,9 +52,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
-        public View view;
-        public ImageView itemImageView;
-        public TextView nameTextView;
+        private View view;
+        private ImageView itemImageView;
+        private TextView nameTextView;
 
         public ItemViewHolder(@NonNull View v) {
             super(v);
